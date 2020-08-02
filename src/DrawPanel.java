@@ -8,8 +8,17 @@ public class DrawPanel extends JPanel {
         int width = getWidth();
         int height = getHeight();
 
-        g.drawLine(200, 300, width, height);
-        g.drawLine(0, 300, width, height);
-        g.drawLine(4000, height, width, 1230);
+        g.drawLine(0, 0, width, height);
+        g.drawLine(0, 10, width, height);
+        g.drawLine(0, 20, width, height);
+        g.drawLine(0, 30, width, height);
+        g.drawLine(0, 40, width, height);
+        g.drawLine(0, 50, width, height);
+        g.drawLine(10, 0, width, height);
+        g.drawLine(20, 0, width, height);
+        g.drawLine(30, 0, width, height);
+        g.drawLine(40, 0, width, height);
+        g.drawLine(50, 0, width, height);
+        g.drawLine(100, height, width, 15);
     }
 }
