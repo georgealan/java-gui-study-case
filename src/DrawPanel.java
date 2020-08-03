@@ -75,7 +75,6 @@ public class DrawPanel extends JPanel {
         g.drawLine(0, height, width / 2 - 180, height / 2 - 180);
         g.drawLine(0, height, width / 2 - 210, height / 2 - 210);
 
-        g.drawLine(0, height, width / 2, height / 2);
         g.drawLine(0, height, width / 2 + 30, height / 2 + 30);
         g.drawLine(0, height, width / 2 + 60, height / 2 + 60);
         g.drawLine(0, height, width / 2 + 90, height / 2 + 90);
