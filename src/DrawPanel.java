@@ -8,80 +8,35 @@ public class DrawPanel extends JPanel {
         int width = getWidth();
         int height = getHeight();
 
-        // INICIO LADO SUPERIOR ESQUERDO
-        g.drawLine(0, 0, width / 2, height / 2);
-        g.drawLine(0, 0, width / 2 - 30, height / 2 + 30);
-        g.drawLine(0, 0, width / 2 - 60, height / 2 + 60);
-        g.drawLine(0, 0, width / 2 - 90, height / 2 + 90);
-        g.drawLine(0, 0, width / 2 - 120, height / 2 + 120);
-        g.drawLine(0, 0, width / 2 - 150, height / 2 + 150);
-        g.drawLine(0, 0, width / 2 - 180, height / 2 + 180);
-        g.drawLine(0, 0, width / 2 - 210, height / 2 + 210);
+        // Controle dos posicionamentos
+        int inclinacao = 0;
+        int grauDeInclinacao = 30;
 
-        g.drawLine(0, 0, width / 2 + 30, height / 2 - 30);
-        g.drawLine(0, 0, width / 2 + 60, height / 2 - 60);
-        g.drawLine(0, 0, width / 2 + 90, height / 2 - 90);
-        g.drawLine(0, 0, width / 2 + 120, height / 2 - 120);
-        g.drawLine(0, 0, width / 2 + 150, height / 2 - 150);
-        g.drawLine(0, 0, width / 2 + 180, height / 2 - 180);
-        g.drawLine(0, 0, width / 2 + 210, height / 2 - 210);
-        // FIM LADO SUPERIOR ESQUERDO
+        do {
+            inclinacao += grauDeInclinacao;
 
-        // INICIO LADO SUPERIOR DIREITO
-//        g.drawLine(height / 2, 0, 0, height);
-//        g.drawLine(0, 0, width / 2 - 30, height / 2 + 30);
-//        g.drawLine(0, 0, width / 2 - 60, height / 2 + 60);
-//        g.drawLine(0, 0, width / 2 - 90, height / 2 + 90);
-//        g.drawLine(0, 0, width / 2 - 120, height / 2 + 120);
-//        g.drawLine(0, 0, width / 2 - 150, height / 2 + 150);
-//        g.drawLine(0, 0, width / 2 - 180, height / 2 + 180);
-//        g.drawLine(0, 0, width / 2 - 210, height / 2 + 210);
+            // POSICIONAMENTO INICIAL DAS LINHAS
+            g.drawLine(0, 0, width / 2, height / 2);
+            g.drawLine(width, 0, width / 2, height / 2);
+            g.drawLine(width / 2, height / 2, width, height);
+            g.drawLine(0, height, width / 2, height / 2);
 
-//        g.drawLine(0, 0, width / 2 + 30, height / 2 - 30);
-//        g.drawLine(0, 0, width / 2 + 60, height / 2 - 60);
-//        g.drawLine(0, 0, width / 2 + 90, height / 2 - 90);
-//        g.drawLine(0, 0, width / 2 + 120, height / 2 - 120);
-//        g.drawLine(0, 0, width / 2 + 150, height / 2 - 150);
-//        g.drawLine(0, 0, width / 2 + 180, height / 2 - 180);
-//        g.drawLine(0, 0, width / 2 + 210, height / 2 - 210);
-        // FIM LADO SUPERIOR DIREITO
+            // LADO SUPERIOR ESQUERDO
+            g.drawLine(0, 0, width / 2 - inclinacao, height / 2 + inclinacao);
+            g.drawLine(0, 0, width / 2 + inclinacao, height / 2 - inclinacao);
 
-        // INICIO LADO INFERIOR DIREITO
-        g.drawLine(width / 2, height / 2, width, height);
-        g.drawLine(width / 2 - 30, height / 2 + 30, width, height);
-        g.drawLine(width / 2 - 60, height / 2 + 60, width, height);
-        g.drawLine(width / 2 - 90, height / 2 + 90, width, height);
-        g.drawLine(width / 2 - 120, height / 2 + 120, width, height);
-        g.drawLine(width / 2 - 150, height / 2 + 150, width, height);
-        g.drawLine(width / 2 - 180, height / 2 + 180, width, height);
-        g.drawLine(width / 2 - 210, height / 2 + 210, width, height);
+            // LADO SUPERIOR DIREITO
+            g.drawLine(width, 0, width / 2 + inclinacao, height / 2 + inclinacao);
+            g.drawLine(width, 0, width / 2 - inclinacao, height / 2 - inclinacao);
 
-        g.drawLine( width / 2 + 30, height / 2 - 30, width, height);
-        g.drawLine( width / 2 + 60, height / 2 - 60, width, height);
-        g.drawLine( width / 2 + 90, height / 2 - 90, width, height);
-        g.drawLine( width / 2 + 120, height / 2 - 120, width, height);
-        g.drawLine( width / 2 + 150, height / 2 - 150, width, height);
-        g.drawLine( width / 2 + 180, height / 2 - 180, width, height);
-        g.drawLine( width / 2 + 210, height / 2 - 210, width, height);
-        // FIM LADO INFERIOR DIREITO
+            // LADO INFERIOR DIREITO
+            g.drawLine(width / 2 - inclinacao, height / 2 + inclinacao, width, height);
+            g.drawLine( width / 2 + inclinacao, height / 2 - inclinacao, width, height);
 
-        // INICIO LADO INFERIOR ESQUERDO
-        g.drawLine(0, height, width / 2, height / 2);
-        g.drawLine(0, height, width / 2 - 30, height / 2 - 30);
-        g.drawLine(0, height, width / 2 - 60, height / 2 - 60);
-        g.drawLine(0, height, width / 2 - 90, height / 2 - 90);
-        g.drawLine(0, height, width / 2 - 120, height / 2 - 120);
-        g.drawLine(0, height, width / 2 - 150, height / 2 - 150);
-        g.drawLine(0, height, width / 2 - 180, height / 2 - 180);
-        g.drawLine(0, height, width / 2 - 210, height / 2 - 210);
+            // LADO INFERIOR ESQUERDO
+            g.drawLine(0, height, width / 2 - inclinacao, height / 2 - inclinacao);
+            g.drawLine(0, height, width / 2 + inclinacao, height / 2 + inclinacao);
 
-        g.drawLine(0, height, width / 2 + 30, height / 2 + 30);
-        g.drawLine(0, height, width / 2 + 60, height / 2 + 60);
-        g.drawLine(0, height, width / 2 + 90, height / 2 + 90);
-        g.drawLine(0, height, width / 2 + 120, height / 2 + 120);
-        g.drawLine(0, height, width / 2 + 150, height / 2 + 150);
-        g.drawLine(0, height, width / 2 + 180, height / 2 + 180);
-        g.drawLine(0, height, width / 2 + 210, height / 2 + 210);
-        // FIM LADO INFERIOR ESQUERDO
+        } while ( inclinacao < 210);
     }
 }
