@@ -16,27 +16,13 @@ public class DrawPanelExerciceTwo extends JPanel {
             inclinacao += grauDeInclinacao;
 
             // POSICIONAMENTO INICIAL DAS LINHAS
-            g.drawLine(0, 0, width / 2, height / 2);
-            /*g.drawLine(width, 0, width / 2, height / 2);
-            g.drawLine(width / 2, height / 2, width, height);
-            g.drawLine(0, height, width / 2, height / 2);*/
+            g.drawLine(0, 0, width - height, height);
 
-            // LADO SUPERIOR ESQUERDO
-            g.drawLine(0, 0, width / 2 - inclinacao, height / 2 + inclinacao);
-            g.drawLine(0, 0, width / 2 + inclinacao, height / 2 - inclinacao);
-
-            /*// LADO SUPERIOR DIREITO
-            g.drawLine(width, 0, width / 2 + inclinacao, height / 2 + inclinacao);
-            g.drawLine(width, 0, width / 2 - inclinacao, height / 2 - inclinacao);
-
-            // LADO INFERIOR DIREITO
-            g.drawLine(width / 2 - inclinacao, height / 2 + inclinacao, width, height);
-            g.drawLine( width / 2 + inclinacao, height / 2 - inclinacao, width, height);
 
             // LADO INFERIOR ESQUERDO
-            g.drawLine(0, height, width / 2 - inclinacao, height / 2 - inclinacao);
-            g.drawLine(0, height, width / 2 + inclinacao, height / 2 + inclinacao);*/
+            g.drawLine(0, inclinacao, width - height + inclinacao, height);
 
-        } while ( inclinacao < 210);
+
+        } while ( inclinacao < 500);
     }
 }
